@@ -7,7 +7,7 @@ export class StoryPageService {
 
   constructor() { }
 
-  getStoryPageById(storyPageId: number) {
+  getStoryPageById(storyPageId: number): StoryPage{
     for (var i=0; i<STORYPAGES.length; i++) {
       if (STORYPAGES[i].id === storyPageId) {
         return STORYPAGES[i];

@@ -1,12 +1,31 @@
-<div class="container">
-  <nav class="red darken-2">
-    <div class="nav-wrapper">
-      <a routerLink="" class="brand-logo center">Adventure</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a class="red darken-2" routerLink="new-story">New Story</a></li>
-      </ul>
-    </div>
-  </nav>
+<body>
+  <header>
+    <nav class="red darken-2">
+      <div class="nav-wrapper">
+        <a routerLink="" class="brand-logo center">Adventure</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a class="red darken-2" routerLink="new-story">New Story</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <router-outlet></router-outlet>
-</div>
+  <main class="container">
+    <router-outlet (newNameSender)="updateName($event)"></router-outlet>
+  </main>
+
+  <footer class="page-footer red darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">{{playerName}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2017
+      </div>
+    </div>
+  </footer>
+</body>

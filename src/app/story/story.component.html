@@ -5,7 +5,7 @@
         <img [src]="imageUrl" alt="Mars">
       </div>
       <div class="card-content">
-        {{storyPageToDisplay.story}}
+        {{formattedStory}}
       </div>
       <div class="card-action">
         <a *ngFor="let option of storyPageToDisplay.options" (click)="navigateTo(option.id)">{{option.option}}</a>
