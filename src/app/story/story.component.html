@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col s12 m8 offset-m2">
+    <div class="card">
+      <div class="card-image">
+        <img [src]="imageUrl" alt="Mars">
+      </div>
+      <div class="card-content">
+        {{storyPageToDisplay.story}}
+      </div>
+      <div class="card-action">
+        <a *ngFor="let option of storyPageToDisplay.options" (click)="navigateTo(option.id)">{{option.option}}</a>
+      </div>
+    </div>
+  </div>
+</div>

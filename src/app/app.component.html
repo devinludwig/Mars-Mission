@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <nav class="red darken-2">
+    <div class="nav-wrapper">
+      <a routerLink="" class="brand-logo center">Adventure</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a class="red darken-2" routerLink="new-story">New Story</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

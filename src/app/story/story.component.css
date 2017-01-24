@@ -1,0 +1,13 @@
+.card-action {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
