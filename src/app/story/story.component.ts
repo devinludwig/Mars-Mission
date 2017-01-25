@@ -5,6 +5,7 @@ import { StoryPage } from '../story-page.model';
 import { Router } from '@angular/router';
 import { StoryPageService } from '../story-page.service';
 import { PlayerService } from '../player.service';
+import { Player } from '../player.model';
 
 @Component({
   selector: 'app-story',
@@ -18,16 +19,14 @@ export class StoryComponent implements OnInit {
   public storyPageId: number = null;
   public imageUrl: string = "";
   public formattedStory: string = "";
+  public player: Player;
 
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private storyPageService: StoryPageService, private playerService: PlayerService) {
-    this.storyPageToDisplay = null;
-    this.storyPageId = null;
-    this.imageUrl = "";
-    // router.routerState.params.subscribe(data => console.log('check'));
+    this.player = this.playerService.getPlayer();
   }
 
   formatStory(story: string): string {
-    return story.replace('@name', this.playerService.getName());
+    return story.replace('@name', this.player.name);
   }
 
   ngOnInit() {
@@ -40,7 +39,16 @@ export class StoryComponent implements OnInit {
   }
 
   navigateTo(id: number): void{
-    this.router.navigate(['story', id]);
+    if (this.player.food <= 0) {
+      this.player.food = 0;
+      this.router.navigate(['story', 0]);
+    } else {
+      this.router.navigate(['story', id]);
+      if (id===1) {
+        this.player.food = 110;
+      }
+    }
+    this.player.food -= 10;
   }
 
 }

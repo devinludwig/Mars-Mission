@@ -1,13 +1,15 @@
-<div class="row">
-  <div class="col s12">
-    <h2>Create your character:</h2>
+<div class="container input-page">
+  <div class="row">
+    <div class="col s12">
+      <h2>Create your character:</h2>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col s12 input-field">
-    <input type="text" name="name" placeholder="Enter Your Name" #name required>
-  </div>
-  <div class="col s12 center">
-    <button class="btn red darken-2" type="button" (click)="startStory(name.value)">Start Story</button>
+  <div class="row">
+    <div class="col s12 input-field">
+      <input type="text" id="name" name="name" placeholder="Enter Your Name" #name required>
+    </div>
+    <div class="col s12 center">
+      <button class="btn red darken-2" type="button" (click)="startStory(name.value)">Start Story</button>
+    </div>
   </div>
 </div>

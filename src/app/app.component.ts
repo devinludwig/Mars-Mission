@@ -7,12 +7,9 @@ import { PlayerService } from './player.service';
   styleUrls: ['./app.component.css'],
   providers: [PlayerService]
 })
-export class AppComponent {
-  @Input() playerName: string;
 
+export class AppComponent {
   constructor(private playerService: PlayerService){}
 
-  updateName(newName) {
-    this.playerService.getName();
-  }
+  player = this.playerService.getPlayer();
 }

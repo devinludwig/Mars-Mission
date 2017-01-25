@@ -12,13 +12,13 @@ export const STORYPAGES: StoryPage[] = [
   "https://www.kennedyspacecenter.com/-/media/DNC/KSCVC/Event-Images/Rocket-Launches/atlas-v-401-night-launchpad.ashx?h=600&w=900&la=en&hash=B536FED5713AB61AC704442D0E25FCBBCEE40FA6",
   [{id: 3, option: "Double-check"}, {id: 0, option: "Just take off"}]),
 
-  new StoryPage("You made it to Mars!  Do you want to land in the center of a crater or high on a plateau?",
+  new StoryPage("You made it to Mars!  Do you want to orbit for awhile to find a good landing spot, or save time and food and land as soon as possible?",
   3,
   "http://www.geir.org/art/future/MarsLanding1.jpg",
-  [{id: 0, option: "Center of crater"}, {id: 4, option: "High on plateau"}]),
+  [{id: 4, option: "Find an ideal landing spot"}, {id: 0, option: "Land as soon as possible"}]),
 
-  new StoryPage("",
+  new StoryPage("Do you want to go explore the martian landscape or stay near your shuttle and set up camp?",
   4,
-  "",
-  [{id: 5, option: ""}, {id: 0, option: ""}]),
+  "http://mks-onlain.ru/wp-content/uploads/2016/08/Poverhnost-Marsa.jpg",
+  [{id: 5, option: "Set up camp"}, {id: 6, option: "Go Exploring"}]),
 ];

@@ -5,12 +5,7 @@ import { player } from './player';
 @Injectable()
 export class PlayerService {
   constructor(){}
-
-  getName(): string{
-    return player.name;
-  }
-
-  setName(name: string): void{
-    player.name = name;
+  getPlayer(){
+    return player;
   }
 }

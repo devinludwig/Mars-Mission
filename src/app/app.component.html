@@ -2,27 +2,34 @@
   <header>
     <nav class="red darken-2">
       <div class="nav-wrapper">
-        <a routerLink="" class="brand-logo center">Adventure</a>
+        <a routerLink="" class="brand-logo center">Choose Your Own Mars Adventure</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a class="red darken-2" routerLink="new-story">New Story</a></li>
+          <li><a class="red darken-4 btn" routerLink="new-story">New Story</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main class="container">
-    <router-outlet (newNameSender)="updateName($event)"></router-outlet>
+    <router-outlet></router-outlet>
   </main>
 
   <footer class="page-footer red darken-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">{{playerName}}</h5>
+          <h5 class="white-text center">{{player.name}}</h5>
         </div>
+        <div class="col l6 s12">
+          <h5 class="white-text center">Food remaining: {{player.food}}</h5>
+          <div class="progress">
+              <div class="determinate" [style.width.%]="player.food" ></div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright red darken-4">
       <div class="container">
       © 2017
       </div>

@@ -8,15 +8,13 @@ import { routing } from './app.routing';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NewStoryComponent } from './new-story/new-story.component';
 import { StoryComponent } from './story/story.component';
-import { StoryTileComponent } from './story-tile/story-tile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     NewStoryComponent,
-    StoryComponent,
-    StoryTileComponent
+    StoryComponent
   ],
   imports: [
     BrowserModule,

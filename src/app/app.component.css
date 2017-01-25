@@ -2,6 +2,10 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-image: url("http://i.dailymail.co.uk/i/pix/2015/10/06/00/2D20024200000578-3261263-image-m-34_1444087590593.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
